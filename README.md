@@ -27,5 +27,6 @@ $ git config --global push.default simple
 
 &git stash list & git stash apply stash@{} | git stash drop stash@{}
 &git stash pop stash@{}
+&git merge fast-forward &&&&for test!!
 
 

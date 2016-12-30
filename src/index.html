@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../dist/style/index.css">
 </head>
 <body>
+	<div class="box">zs</div>
 	<table class="login">
 		<caption>人员信息</caption>
 		<thead>
@@ -27,7 +28,7 @@
 				<td>男</td>
 				<td>21</td>
 			</tr>
-			<tr>npm
+			<tr>
 				<td>李四</td>
 				<td>女</td>
 				<td>21</td>
@@ -57,7 +58,7 @@
 	    	console.log("ok!")
 	    });*/
 
-	 var json = [
+	var json = [
 	 	{
 	 	    "name":"zhangsan",
 	 	    "sex":"man",
@@ -73,8 +74,7 @@
 	 		"sex":"man",
 	 		"age":28
 	 	}
-
-	 ];
+	];
 	/* $.eachT(obj,func){
 	 	if(obj instanceof Array){
 	 		func(a,b){
@@ -93,7 +93,24 @@
 	 	}
 	 }*/
 
+	 var str = "";
+	 $.each(json,function(index,item){
+
+    	str += "<tr><td>"+item.name+"</td><td>"+item.sex+"</td><td>"+item.age+"</td></tr>";
+    	console.log(index,str);
+    	$('.login').html(str);
+
+	 });
 	 
+	 var box = document.getElementsByClassName('box')[0];
+	 var object = new Object();
+	 // console.log(box,object);
+	 for(var i in box){
+	 	// console.log(i+":"+box[i]);
+	 };
+	 for(var i in $){
+	 	console.log(i+":"+$[i]);
+	 }
 
 </script>
 </html>
