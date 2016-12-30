@@ -2,28 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>$.each() pratice</title>
-	<!-- <style type="text/css">
-		.login {
-			border-collapse: collapse;
-			/*border-collapse: separate;
-			border-spacing: 5px;*/
-			empty-cells: show;
-			table-layout: auto;
-			/*visibility: hidden;*/
-		}
-		.login tr td {
-			border: 1px solid #000;
-			width: 100px;
-			height: 50px;
-			background-color: red;
-			text-align: center;
-		}
-		.login caption {
-			border: 1px inside black;
-			border-bottom: none;
-		}
-	</style> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maxumum-scale=1, user-scalable=no"> -->
+	<title>app</title>
+	<script src="js/rem.min.js"></script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<link rel="stylesheet" href="../dist/style/index.css">
 </head>
 <body>
 	<table class="login">
@@ -41,7 +27,7 @@
 				<td>男</td>
 				<td>21</td>
 			</tr>
-			<tr>
+			<tr>npm
 				<td>李四</td>
 				<td>女</td>
 				<td>21</td>
@@ -59,4 +45,55 @@
 		</tfoot>
 	</table>
 </body>
+<script>
+/*	第一种方式定义angular APP,使用angular.bootstrap 来显示地做初始化工具，参数指明了根节点，装载的模块（可以使多个模块）*/
+	/*angular.bootstrap($(document));
+	angular.module.('Myapp',[],function(){
+		console.log('I am here!!')
+	})*/
+/*第二种方式定义angular APP*/
+	/*var app = angular.module('Myapp',[],function(){console.log('I am here!')})
+	    .controller('TestCtrl',function(){
+	    	console.log("ok!")
+	    });*/
+
+	 var json = [
+	 	{
+	 	    "name":"zhangsan",
+	 	    "sex":"man",
+	 	    "age":28
+	 	},
+	 	{
+	 		"name":"lisi",
+	 		"sex":"woman",
+	 		"age":28
+	 	},
+	 	{
+	 		"name":"wangwu",
+	 		"sex":"man",
+	 		"age":28
+	 	}
+
+	 ];
+	/* $.eachT(obj,func){
+	 	if(obj instanceof Array){
+	 		func(a,b){
+	 			for(var i = 0; i<obj.length; i++){
+	 				a = i;
+	 				b = obj[i];
+	 			}
+	 		}
+	 	}esle(obj instanceof Object){
+	 		func(a,b){
+	 			for(var i in obj){
+	 				a = i;
+	 				b = obj[i];
+	 			}
+	 		}
+	 	}
+	 }*/
+
+	 
+
+</script>
 </html>
