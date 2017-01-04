@@ -1,0 +1,92 @@
+$color1:#aeaeae;
+$left:left;
+$common: 20px;
+body {
+	width: 100%;
+	position: relative;
+	.yourName{
+		float:left;
+		font-size: 0.4rem;
+		color:red;
+		width: 50%;
+		height: 2rem;
+		background: url(../img/sexy_girl.jpg) no-repeat center/100%;
+	};
+	.big {
+		height: 800px;
+		background-color: red;
+	}
+
+}
+/*banner轮播*/
+.banner_area {
+	width: 100%;
+	overflow: hidden;
+	.banner_wrap {
+		width: 30rem;
+		/*transition: all 1s linear;*/
+		animation: ani 16s linear alternate infinite;
+		.banner_box {
+			width:7.5rem;
+			display:inline-block;
+			word-spacing:0;
+			font-size: 0;
+			float: left;
+			/* transition-property: all;
+			transition-duration: 1s;
+			transition-timing-function: linear; */
+			/*transition: all 1s linear;*/
+			/*animation-name: ani;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-delay: 0;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+			animation-direction: alternate;*/
+			/*animation: ani 3s linear infinite;*/
+			a {
+				display: block;
+				font-size: 0;
+				img {
+					width: 7.5rem;
+					padding:0;
+					magin:0;
+				}
+			}
+		}
+	}	
+}
+.login {
+	float:right;
+	width: 50%;
+	border-collapse: collapse;
+	font-size: 0.3rem;
+	empty-cells: show;
+	table-layout: auto;
+	$color2: red !global;
+	td {
+		border: 3px solid black;
+		height: 50px;
+		text-align: center;
+		background-color: $color1;
+		width: 100px;
+	}
+	caption {
+		border: 12px solid $color2; 
+		border-bottom: none;
+	}
+}
+@keyframes ani {
+	0%,20%{
+		transform: translateX(0);
+	}
+	25%,45%{
+		transform: translateX(-7.5rem);
+	}
+	50%,75%{
+		transform: translateX(-15rem);
+	}
+	80%,100% {
+		transform: translateX(-22.5rem);
+	}
+}

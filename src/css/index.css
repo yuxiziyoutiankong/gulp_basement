@@ -1,0 +1,94 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  position: relative; }
+  body .yourName {
+    float: left;
+    font-size: 0.4rem;
+    color: red;
+    width: 50%;
+    height: 2rem;
+    background: url(../img/sexy_girl.jpg) no-repeat center/100%; }
+  body .big {
+    height: 800px;
+    background-color: red; }
+
+/*banner轮播*/
+.banner_area {
+  width: 100%;
+  overflow: hidden; }
+  .banner_area .banner_wrap {
+    width: 30rem;
+    /*transition: all 1s linear;*/
+    -webkit-animation: ani 16s linear alternate infinite;
+    animation: ani 16s linear alternate infinite; }
+    .banner_area .banner_wrap .banner_box {
+      width: 7.5rem;
+      display: inline-block;
+      word-spacing: 0;
+      font-size: 0;
+      float: left;
+      /* transition-property: all;
+			transition-duration: 1s;
+			transition-timing-function: linear; */
+      /*transition: all 1s linear;*/
+      /*animation-name: ani;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-delay: 0;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+			animation-direction: alternate;*/
+      /*animation: ani 3s linear infinite;*/ }
+      .banner_area .banner_wrap .banner_box a {
+        display: block;
+        font-size: 0; }
+        .banner_area .banner_wrap .banner_box a img {
+          width: 7.5rem;
+          padding: 0;
+          magin: 0; }
+
+.login {
+  float: right;
+  width: 50%;
+  border-collapse: collapse;
+  font-size: 0.3rem;
+  empty-cells: show;
+  table-layout: auto; }
+  .login td {
+    border: 3px solid black;
+    height: 50px;
+    text-align: center;
+    background-color: #aeaeae;
+    width: 100px; }
+  .login caption {
+    border: 12px solid red;
+    border-bottom: none; }
+
+@-webkit-keyframes ani {
+  0%, 20% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  25%, 45% {
+    -webkit-transform: translateX(-7.5rem);
+    transform: translateX(-7.5rem); }
+  50%, 75% {
+    -webkit-transform: translateX(-15rem);
+    transform: translateX(-15rem); }
+  80%, 100% {
+    -webkit-transform: translateX(-22.5rem);
+    transform: translateX(-22.5rem); } }
+
+@keyframes ani {
+  0%, 20% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  25%, 45% {
+    -webkit-transform: translateX(-7.5rem);
+    transform: translateX(-7.5rem); }
+  50%, 75% {
+    -webkit-transform: translateX(-15rem);
+    transform: translateX(-15rem); }
+  80%, 100% {
+    -webkit-transform: translateX(-22.5rem);
+    transform: translateX(-22.5rem); } }

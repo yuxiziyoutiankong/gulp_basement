@@ -6,13 +6,38 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maxumum-scale=1, user-scalable=no"> -->
 	<title>app</title>
 	<script src="js/rem.min.js"></script>
-	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>
-	<script src="../node_modules/angular/angular.min.js"></script>
-	<link rel="stylesheet" href="../dist/style/index.css">
+	<!-- <script src="../node_modules/angular/angular.min.js"></script> -->
+	<link rel="stylesheet" href="css/mobile-reset.css">
+	<link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-	<div class="box">zs</div>
+<body> 
+	<div class="banner_area">
+		<ul class="banner_wrap">
+			<li class="banner_box">
+				<a href="http://www.baidu.com">
+					<img src="img/app_ggw1.jpg" alt="pic">
+				</a>
+			</li>
+			<li class="banner_box">
+				<a href="#">
+					<img src="img/app_ggw2.jpg" alt="pic">
+				</a>
+			</li>
+			<li class="banner_box">
+				<a href="#">
+					<img src="img/app_ggw3.jpg" alt="pic">
+				</a>
+			</li>
+			<li class="banner_box">
+				<a href="#">
+					<img src="img/app_ggw4.jpg" alt="pic">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="yourName">woshizhoushuai</div>
 	<table class="login">
 		<caption>人员信息</caption>
 		<thead>
@@ -22,6 +47,7 @@
 				<td>年龄</td>
 			</tr>
 		</thead>
+
 		<tbody>
 			<tr>
 				<td>张三</td>
@@ -45,6 +71,10 @@
 			</tr>
 		</tfoot>
 	</table>
+	<span class="little">littles</span>
+	<div class="big">
+		<a href="">123</a>
+	</div>
 </body>
 <script>
 /*	第一种方式定义angular APP,使用angular.bootstrap 来显示地做初始化工具，参数指明了根节点，装载的模块（可以使多个模块）*/
@@ -58,7 +88,7 @@
 	    	console.log("ok!")
 	    });*/
 
-	var json = [
+	/*var json = [
 	 	{
 	 	    "name":"zhangsan",
 	 	    "sex":"man",
@@ -74,7 +104,7 @@
 	 		"sex":"man",
 	 		"age":28
 	 	}
-	];
+	];*/
 
 
 	/* 
@@ -97,18 +127,18 @@
 	 	}
 	 }*/
 
-	 var str = "";
+	/* var str = "";
 	 $.each(json,function(index,item){
 
     	str += "<tr><td>"+item.name+"</td><td>"+item.sex+"</td><td>"+item.age+"</td></tr>";
     	console.log(index,str);
     	$('.login').html(str);
 
-	 });
+	 });*/
 	 
 
 	 /*测试文件！*/
-	 var box = document.getElementsByClassName('box')[0];
+	 /*var box = document.getElementsByClassName('box')[0];
 	 var object = new Object();
 	 // console.log(box,object);
 	 for(var i in box){
@@ -116,7 +146,7 @@
 	 };
 	 for(var i in $){
 	 	console.log(i+":"+$[i]);
-	 }
+	 }*/
 
      /*function typeTest(ele){
      	 // typeof ele;
@@ -125,6 +155,6 @@
      	 }
      	 ele instanceof Array? return Array:ele instanceof Math?return Math:return;
      }*/
-     console(typeTest(object));
+     // console(typeTest(object));
 </script>
 </html>
