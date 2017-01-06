@@ -7,6 +7,11 @@ address, cite, dfn, em, var {
 .clearfix:before, .clearfix:after { content: '.'; display: block; overflow: hidden; visibility: hidden; font-size: 0; line-height: 0; width: 0; height: 0;}
 .clearfix:after{ clear: both;}
 .clearfix{ zoom: 1;}@charset "UTF-8";
+input,button {
+	outline: none;
+	border: none;
+	padding: 0;
+}
 body {
   margin: 0 auto;
   min-width: 320px;

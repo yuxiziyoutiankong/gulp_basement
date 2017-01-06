@@ -12,6 +12,29 @@ body {
   body .big {
     height: 800px;
     background-color: red; }
+  body .form {
+    width: 100%;
+    font-size: 0.3rem; }
+    body .form label, body .form input[type="radio"] {
+      vertical-align: middle; }
+    body .form input {
+      display: inline-block;
+      line-height: 0.78rem;
+      border: 1px solid lime;
+      padding: 0;
+      font-size: 0.3rem; }
+    body .form button {
+      padding: 0 0.06rem;
+      background-color: navy;
+      color: #fff; }
+    body .form .name-box {
+      line-height: 0.8rem;
+      background-color: teal; }
+    body .form .number-box {
+      line-height: 0.8rem;
+      background-color: maroon; }
+    body .form .sex-box {
+      line-height: 0.6rem; }
 
 /*banner轮播*/
 .banner_area {
@@ -20,8 +43,8 @@ body {
   .banner_area .banner_wrap {
     width: 30rem;
     /*transition: all 1s linear;*/
-    -webkit-animation: ani 16s linear alternate infinite;
-    animation: ani 16s linear alternate infinite; }
+    -webkit-animation: ani 13s linear infinite;
+    animation: ani 13s linear infinite; }
     .banner_area .banner_wrap .banner_box {
       width: 7.5rem;
       display: inline-block;
@@ -49,8 +72,8 @@ body {
           magin: 0; }
 
 .login {
-  float: right;
-  width: 50%;
+  /*float:right;*/
+  /*width: 100%;*/
   border-collapse: collapse;
   font-size: 0.3rem;
   empty-cells: show;

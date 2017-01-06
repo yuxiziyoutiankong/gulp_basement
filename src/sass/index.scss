@@ -16,6 +16,36 @@ body {
 		height: 800px;
 		background-color: red;
 	}
+	.form {
+		width: 100%;
+		font-size: 0.3rem;
+		label,input[type="radio"] {
+			vertical-align: middle;
+		}
+		input {
+			display: inline-block;
+			line-height: 0.78rem;
+			border: 1px solid lime;
+			padding: 0;
+			font-size: 0.3rem;
+		}
+		button {
+			padding: 0 0.06rem;
+			background-color: navy;
+			color: #fff;
+		}
+		.name-box {
+			line-height: 0.8rem;
+			background-color: teal; 
+		}
+		.number-box {
+			line-height: 0.8rem;
+			background-color: maroon;
+		}
+		.sex-box {
+			line-height: 0.6rem;
+		}
+	}
 
 }
 /*banner轮播*/
@@ -25,7 +55,7 @@ body {
 	.banner_wrap {
 		width: 30rem;
 		/*transition: all 1s linear;*/
-		animation: ani 16s linear alternate infinite;
+		animation: ani 13s linear infinite;
 		.banner_box {
 			width:7.5rem;
 			display:inline-block;
@@ -57,8 +87,8 @@ body {
 	}	
 }
 .login {
-	float:right;
-	width: 50%;
+	/*float:right;*/
+	/*width: 100%;*/
 	border-collapse: collapse;
 	font-size: 0.3rem;
 	empty-cells: show;

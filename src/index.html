@@ -7,6 +7,7 @@
 	<title>app</title>
 	<script src="js/rem.min.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/angular.min.js"></script>
 	<script src="js/index.js"></script>
 	<!-- <script src="../node_modules/angular/angular.min.js"></script> -->
 	<link rel="stylesheet" href="css/mobile-reset.css">
@@ -17,28 +18,27 @@
 		<ul class="banner_wrap">
 			<li class="banner_box">
 				<a href="http://www.baidu.com">
-					<img src="img/app_ggw1.jpg" alt="pic">
+					<img src="images/app_ggw1.jpg" alt="pic">
 				</a>
 			</li>
 			<li class="banner_box">
 				<a href="#">
-					<img src="img/app_ggw2.jpg" alt="pic">
+					<img src="images/app_ggw2.jpg" alt="pic">
 				</a>
 			</li>
 			<li class="banner_box">
 				<a href="#">
-					<img src="img/app_ggw3.jpg" alt="pic">
+					<img src="images/app_ggw3.jpg" alt="pic">
 				</a>
 			</li>
 			<li class="banner_box">
 				<a href="#">
-					<img src="img/app_ggw4.jpg" alt="pic">
+					<img src="images/app_ggw4.jpg" alt="pic">
 				</a>
 			</li>
 		</ul>
 	</div>
-	<div class="yourName">woshizhoushuai</div>
-	<table class="login">
+	<!-- <table class="login">
 		<caption>人员信息</caption>
 		<thead>
 			<tr>
@@ -47,7 +47,7 @@
 				<td>年龄</td>
 			</tr>
 		</thead>
-
+	
 		<tbody>
 			<tr>
 				<td>张三</td>
@@ -70,11 +70,51 @@
 				<td colspan="3">total:3</td>
 			</tr>
 		</tfoot>
-	</table>
-	<span class="little">littles</span>
-	<div class="big">
+	</table> -->
+	<form action="#" class="form">
+		<div class="name-box">
+			<label for="user">用户名：</label>
+			<input id="user" type="text" name="username" required autofocus placeholder="请输入用户名">
+		</div>
+		<div class="number-box">
+			<label for="phone">手机号：</label>
+			<input type="text" id="phone" name="telephone" required placeholder="请输入您的手机号" pattern="/(^1[3578]{1}/d{9}$)/">
+		</div>
+		<div class="sex-box">
+			<label for="man">男</label><input type="radio" id="man" name="sex" required value="man">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="woman">女</label><input type="radio" id="woman" name="sex" required value="woman">
+		</div>
+		<div class="password-box">
+			<label for="password">密码：&nbsp;</label>
+			<input type="text" placeholder="请输入您的密码" size="10">
+			<label for="remember">记住密码</label>
+			<input type="radio" id="remember">
+		</div>
+		<input type="text" name="search" required list="fruitlist">
+		<input type="date">
+		<datalist id="fruitlist">
+			<option value="苹果">apple</option>
+			<option value="梨">pear</option>
+			<option value="香蕉">banana</option>
+		</datalist>
+
+
+
+		<input type="file" accept="image/*;capture=camcorder"> 
+		<input type="file" accept="audio/*;capture=microphone">
+		<input type="file" accept="image/*">
+
+
+
+		<button type="reset">重置</button>
+		<button type="submit">提交</button>
+
+	</form>
+	<!-- <div class="big" ng-app="myapp" ng-init="arr[1,2,'数字','请输入数字']">
+		<input type="text" name="number" ng-model="arr[2]">
+		<p class="sync" ></p>
 		<a href="">123</a>
-	</div>
+	</div> -->
 </body>
 <script>
 /*	第一种方式定义angular APP,使用angular.bootstrap 来显示地做初始化工具，参数指明了根节点，装载的模块（可以使多个模块）*/
@@ -156,5 +196,11 @@
      	 ele instanceof Array? return Array:ele instanceof Math?return Math:return;
      }*/
      // console(typeTest(object));
+/*     控制器必须出现在某个模块下，想创建一个控制器必须创建一个模块；*/
+    var module = angular.module('myapp',[]);
+/*    angular在执行控制器函数时，会根据参数的名字（$scope)去自动的注入对象*/
+    module.controller('ctrl',['$scope','$http',function($scope,$http){
+
+    }])
 </script>
 </html>
